@@ -3,8 +3,8 @@ import { Routes, Route } from "react-router-dom"
 
 /*** Pages ***/
 import Home from './pages/Home'
-import PageOne from './pages/Page01'
-import PageTwo from './pages/Page02'
+import PageOne from './pages/StudentProgressPage'
+import PageTwo from './pages/SurveyManager'
 import PageThree from './pages/Page03'
 import Counter from './pages/ExampleCounter'
 import Layout from './pages/ExampleLayout'

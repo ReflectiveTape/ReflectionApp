@@ -8,7 +8,7 @@ import Authenticator from './Authenticator'
 
 export default function NavBar() {
   const { user } = Hooks.useAuth()
-  
+
   return (
     <>
       <Navbar bg="dark" variant="dark">
@@ -16,9 +16,9 @@ export default function NavBar() {
           <Navbar.Brand as={Link} to="/">NameHere</Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link as={Link} to="/">Home</Nav.Link>
-            {user ? <Nav.Link as={Link} to="/page-oone">Secret Logged In Page</Nav.Link>: null}
-            <Nav.Link as={Link} to="/page-oone">Page 1</Nav.Link>
-            <Nav.Link as={Link} to="/page-twooo">Page 2</Nav.Link>
+            {user ? <Nav.Link as={Link} to="/page-oone">Secret Logged In Page</Nav.Link> : null}
+            <Nav.Link as={Link} to="/page-oone">Student Progress</Nav.Link>
+            <Nav.Link as={Link} to="/page-twooo">Make Questions</Nav.Link>
             <Nav.Link as={Link} to="/page-three">Page 3</Nav.Link>
             <Nav.Link as={Link} to="/counter-example">Counter</Nav.Link>
             <Nav.Link as={Link} to="/layout-example">Layout</Nav.Link>
