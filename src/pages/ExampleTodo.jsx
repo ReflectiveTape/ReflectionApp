@@ -4,44 +4,44 @@ import { Button, Stack } from 'react-bootstrap'
 
 export default function Todo() {
   const db = Hooks.useDatabase('team_x', 'todo_items')
-  const [iiitems, setIiitems] = React.useState([])
+  const [items, setIitems] = React.useState([])
 
-  const refreeeshItems = async () => {
+  const refreshItems = async () => {
     const data = await db.fetchAll()
-    setIiitems(data)
+    setIitems(data)
   }
 
-  Utils.onMount(refreeeshItems);
+  Utils.onMount(refreshItems);
 
-  const insertIteeeem = async (value) => {
+  const insertItem = async (value) => {
     const item = { theTodoText: value }
     await db.insertOne(item)
-    refreeeshItems()
+    refreshItems()
   }
 
-  const deleteIteeem = async (item) => {
+  const deleteItem = async (item) => {
     await db.deleteOne(item);
-    refreeeshItems();
+    refreshItems();
   }
 
-  const makeTodoooListItem = (item) => (
-    <TodoItem key={item._id} iteeem={item} remooove={deleteIteeem} />
+  const makeTodoListItem = (item) => (
+    <TodoItem key={item._id} iteeem={item} remooove={deleteItem} />
   )
 
   return (
     <>
       <ErrorAlert error={db.error} />
-      <h5>Todo List</h5>
-      {iiitems ? iiitems.map(makeTodoooListItem) : null}
-      <TodoInput submit={insertIteeeem} />
+      <h5>Make your own questions!</h5>
+      {items ? items.map(makeTodoListItem) : null}
+      <TodoInput submit={insertItem} />
     </>
   )
 }
 
 
 function TodoInput({ submit }) {
-  const handleSubmiiit = async (data, form) => {
-    const text = data['todoTeeext']
+  const handleSubmit = async (data, form) => {
+    const text = data['todoText']
     if (text && text.length > 0) {
       submit(text)
       form.reset()
@@ -50,22 +50,22 @@ function TodoInput({ submit }) {
   
   return (
     <>
-      <Form className={'col m-0'} onSubmit={handleSubmiiit}>
+      <Form className={'col m-0'} onSubmit={handleSubmit}>
         <Input type='text' className='m-0'
-          placeholder='Enter todo item'
-          id='todoTeeext'
+          placeholder='Question 1'
+          id='Question1'
         />
       </Form>
     </>
   )
 }
 
-function TodoItem({ iteeem, remooove }) {
+function TodoItem({ item, remove }) {
   return (
     <>
       <Stack direction='horizontal' className='mb-1'>
-        <span className={'col mx-2'}>{iteeem.theTodoText}</span>
-        <Button className='btn-close' onClick={() => remooove(iteeem)} />
+        <span className={'col mx-2'}>{item.theTodoText}</span>
+        <Button className='btn-close' onClick={() => remove(item)} />
       </Stack>
     </>
   )

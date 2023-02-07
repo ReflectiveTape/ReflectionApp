@@ -10,17 +10,10 @@ export default function PageThree() {
     <>
       <Container>
         <Row>
-          <FancyCol className="col-9">1 of 2</FancyCol>
-          <FancyCol>2 of 2</FancyCol>
-        </Row>
-        <Row style={{height: "200px"}}>
-          <FancyCol className="d-flex 
- align-items-center justify-content-center">1 of 3</FancyCol>
-          <FancyCol>2 of 3</FancyCol>
-          <FancyCol className="col-6">3 of 3</FancyCol>
+          
         </Row>
       </Container>
-      <Link to="/">Go Home</Link>
+      <Link to="/">Back</Link>
     </>
   )
 }

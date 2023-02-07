@@ -5,8 +5,8 @@ import { Button } from 'react-bootstrap'
 export default function Home() {
   return (
     <>
-      <h1>Home</h1>
-      <Button as={Link} to="/page-oone">Go to Page One</Button>
+      <h1>Login</h1>
+      <Button as={Link} to="/page-oone">Start Quiz</Button>
     </>
   )
 }

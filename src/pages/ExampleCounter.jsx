@@ -19,7 +19,7 @@ export default function PageOne() {
       <h2>{count}</h2>
       <Button onClick={decrement}>-</Button>
       <Button onClick={increment}>+</Button>
-      <Link to="/">Go to Home</Link>
+      <Link to="/">Back to Home</Link>
     </>
   )
 }
