@@ -15,6 +15,7 @@ export class SurveyModel extends Component {
   // HANDLES ANY INPUT CHANGE
   handleChange = input => e => {
     this.setState({ [input]: e.target.value });
+    console.log(this.state)
   }
 
   render() {

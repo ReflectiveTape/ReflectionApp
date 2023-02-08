@@ -28,6 +28,8 @@ main {
 }
 
 .middle {
-  margin: 40px;
-  width: 700px;
+  padding: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #F7FAFD;
 }
