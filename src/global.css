@@ -1,8 +1,9 @@
 main {
   text-align: center;
   vertical-align: center;
-  line-height: 100vh
+  line-height: 100vh;
 }
+
 
 .footer {
   position: absolute;
@@ -10,6 +11,23 @@ main {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #efefef;
+  background-color: #F8F9FD;
   text-align: center;
+}
+
+
+.sidebar {
+  background-color: #ebebeb;
+  height: 100%;
+  padding: 20px;
+}
+.sidebar > * {
+  width: 200px;
+  padding:20px;
+  margin: auto;
+}
+
+.middle {
+  margin: 40px;
+  width: 700px;
 }

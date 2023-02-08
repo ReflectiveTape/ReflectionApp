@@ -12,8 +12,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "axios": "^0.27.2",
     "bootstrap": "^5.2.1",
+    "framer-motion": "^9.0.2",
     "react-bootstrap": "^2.5.0",
     "react-inspector": "^6.0.1",
     "react-router-dom": "^6.6.1",

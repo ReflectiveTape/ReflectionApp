@@ -1,16 +1,25 @@
-import React from 'react'
-import { Link } from "react-router-dom"
-import { Button } from 'react-bootstrap'
-import CreateQuestion from '../components/CreateQuestion'
+import React, { useState } from "react";
+import SurveyModel from '../components/SurveyModel'
+import { Row, Col, Button, Container } from 'react-bootstrap'
 
-export default function PageTwo() {
+
+export default function SurveyManager() {
 
   return (
     <>
-      <h1>Survey Creator</h1>
-      <Button as={Link} to="/">Go Home</Button>
-      <CreateQuestion />
-
+      <Row>
+        <Col lg="3" className="sidebar">
+          <Container>
+            <Button>Create New Survey</Button>
+          </Container>
+        </Col>
+        <Col>
+          <Container className="middle">
+            <SurveyModel />
+          </Container>
+        </Col>
+      </Row>
     </>
   )
 }
+
